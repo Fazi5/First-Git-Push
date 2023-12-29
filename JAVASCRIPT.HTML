@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>USE JAVASCRIPT TO CHANGE INTO HTML</h2>
+<p>This example writes "Hello JavaScript!" into an HTML element with
+id="demo":</p>
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML ="MY FIRST TEXT WITHJAVASCRIPT";
+</script>
+<hr/>
+<h2>MY FIRST JAVASCRIPT</h2>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML=Date()">Click me to display DATE and TIME</button>
+<p id="demo"></p>
+<hr/>
+<h1>ADDING 2 NUMBERS </h1>
+<script>
+var X, Y, S
+X = prompt("Enter first number")
+Y = prompt("Enter second number")
+S = parseInt(X) + parseInt(Y)
+alert("Sum of two values = " + S)
+</script>
+<hr/>
+<h1>JAVASCRIPT ARRAYS</h1>
+<p id="demo"></p>
+<script>
+const cars=["saab", "volvo", "BMW"]
+document.getElementById("demo").innerHTML=cars;
+</script>
+<hr/>
+<h1>My first javascript</h1>
+<p>Here javascript changes the vaue of source (src) attribute of an
+image.</p>
+<script>
+function light(sw){
+var pic;
+if(sw==0){
+pic="download.jpeg"
+}
+else{
+pic="dowonload(1).jpeg"
+}
+document.getElementById('myImage').src=pic;
+}
+</script>
+<img id="myImage" src="" width="500" >
+
+<p>
+<button type="buttn"onclick="light(0)">GREENERY</button>
+<button type="buttn"onclick="light(1)">DESERT</button>
+</p>
+<hr/>
+
+</body>
+
+</html>
