@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Division</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h2>Divide Two Numbers</h2>
+    <form id="numberForm">
+        <input type="number" id="number1" placeholder="Enter first number" required>
+        <input type="number" id="number2" placeholder="Enter second number" required>
+       <br/>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById('numberForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let number1 = parseFloat(document.getElementById('number1').value);
+            let number2 = parseFloat(document.getElementById('number2').value);
+            let result = number1 / number2;
+            if (isNaN(result)) {
+                alert('Please enter valid numbers');
+            } else {
+                alert('The result is ' + result + '. The number after the division is ' + result.toFixed(0) + ' which is ' + (result.toFixed(0) % 2 === 0 ? 'even' : 'odd') + '.');
+            }
+        });
+    </script>
+</body>
+</html>
